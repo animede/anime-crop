@@ -51,4 +51,20 @@ FaceDetection confidence lebel　FaceDitection時の推論精度指定　大き�
 
 Flag　クリックでflaggedディレクトリが作成され画像が保存されます。
 
+このソフトウエアが以下のaiを利用しています。
+
+背景削除
+
+https://github.com/SkyTNT/anime-segmentation
+
+アップスケール
+
+https://github.com/xinntao/Real-ESRGAN
+
+Face detection
+
+SSD
+
+
+
 
