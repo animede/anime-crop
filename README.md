@@ -4,17 +4,23 @@
 
 ## インストール
 
-git clone 
+### リポジトリのクローン
+
+git clone https://github.com/animede/anime-crop.git
+
+### 仮想環境の準備
 
 python3 -m venv aseg
 
 source aseg/bin/activate
 
+### 環境構築
+
 cd anime-crop
 
 pip install requirements.txt
 
-ウエイトのダウンロード
+### ウエイトのダウンロード
 
 https://huggingface.co/UZUKI/Scalable-tkh/tree/main
 
@@ -51,7 +57,7 @@ FaceDetection confidence lebel　FaceDitection時の推論精度指定　大き�
 
 Flag　クリックでflaggedディレクトリが作成され画像が保存されます。
 
-このソフトウエアが以下のaiを利用しています。
+## このソフトウエアは以下のAIを利用しています。
 
 背景削除
 
