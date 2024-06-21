@@ -4,21 +4,63 @@
 
 ## インストール
 
+Ubuntuの場合はターミナル
+
+Windowsの場合はWindowsシステムのコマンドプロンプト
+
 ### リポジトリのクローン
 
 git clone https://github.com/animede/anime-crop.git
 
+Windows==>git または　Github Desktopをインストールしてリポジトリをクローンする
+
+git　==>https://gitforwindows.org/
+
+参考　https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c
+
 ### 仮想環境の準備
 
-python3 -m venv aseg
+python -m venv aseg
 
 source aseg/bin/activate
+
+Windows==>aseg\Script\activate
 
 ### 環境構築
 
 cd anime-crop
 
-pip install requirements.txt
+pip install -r requirements.txt
+
+インストールされないモジュールがあるので以下手動でインストール
+
+pip install gradio
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+pip install pip install opencv-python
+
+pip install basicsr
+
+pip install numpy==1.26.3
+
+pip install pytorch_lightning
+
+### basicSRの修正
+
+インストールしたままではエラーになるので以下対処
+
+==>　https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/13985
+
+\aseg\Lib\site-packages\basicsr\data\degradations.py　line7を
+
+from torchvision.transforms.functional_tensor import rgb_to_grayscale
+
+から
+
+from torchvision.transforms.functional import rgb_to_grayscale
+
+に変更
 
 ### ウエイトのダウンロード
 
