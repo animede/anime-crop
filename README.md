@@ -113,6 +113,8 @@ Face detection
 
 SSD
 
+## ライセンス
 
+MIT
 
 
